@@ -56,3 +56,64 @@ def predict_performance():
         label_result.config(text=f'Predicted GPA for third semester: {predicted_gpa:.2f}', foreground='green')
     except ValueError:
         label_result.config(text='Please enter valid numeric values for GPA fields.', foreground='red')
+
+              # Create the GUI
+root = tk.Tk()
+root.title('GPA Predictor')
+
+
+ttk.Label(root, text='GPA of Semester 1: ').grid(row=0, column=0, padx=10, pady=5)
+entry_gpa1 = ttk.Entry(root)
+entry_gpa1.grid(row=0, column=1, padx=10, pady=5)
+
+ttk.Label(root, text='GPA of Semester 2: ').grid(row=1, column=0, padx=10, pady=5)
+entry_gpa2 = ttk.Entry(root)
+entry_gpa2.grid(row=1, column=1, padx=10, pady=5)
+
+ttk.Label(root, text='Commutes From Home').grid(row=2, column=0, padx=10, pady=5)
+combobox_commutes_from_home = ttk.Combobox(root, values=['Yes', 'No'])
+combobox_commutes_from_home.grid(row=2, column=1, padx=10, pady=5)
+combobox_commutes_from_home.set('No')
+
+ttk.Label(root, text='Economic Status').grid(row=3, column=0, padx=10, pady=5)
+combobox_economic_status = ttk.Combobox(root, values=['Greter than Rs.50000' , 'Less than Rs.50000'])
+combobox_economic_status.grid(row=3, column=1, padx=10, pady=5)
+combobox_economic_status.set('Greter than Rs.50000')
+
+ttk.Label(root, text='Part-Time Job').grid(row=4, column=0, padx=10, pady=5)
+combobox_part_time_job = ttk.Combobox(root, values=['Yes', 'No'])
+combobox_part_time_job.grid(row=4, column=1, padx=10, pady=5)
+combobox_part_time_job.set('No')
+
+ttk.Label(root, text='Distance to Campus').grid(row=5, column=0, padx=10, pady=5)
+entry_distance_to_campus = ttk.Entry(root)
+entry_distance_to_campus.grid(row=5, column=1, padx=10, pady=5)
+
+ttk.Label(root, text='Internet Connection').grid(row=6, column=0, padx=10, pady=5)
+combobox_internet_connection = ttk.Combobox(root, values=['Good', 'Bad'])
+combobox_internet_connection.grid(row=6, column=1, padx=10, pady=5)
+combobox_internet_connection.set('Good')
+
+ttk.Label(root, text='Attendance').grid(row=7, column=0, padx=10, pady=5)
+combobox_attendance = ttk.Combobox(root, values=['Greater than 50%', 'Less than 50%'])
+combobox_attendance.grid(row=7, column=1, padx=10, pady=5)
+combobox_attendance.set('Greater than 50%')
+
+ttk.Label(root, text='Time Spent on Social Media Per week(hours)').grid(row=8, column=0, padx=10, pady=5)
+entry_social_media_time = ttk.Entry(root)
+entry_social_media_time.grid(row=8, column=1, padx=10, pady=5)
+
+ttk.Label(root, text='Long-Term Illness').grid(row=9, column=0, padx=10, pady=5)
+combobox_long_term_illness = ttk.Combobox(root, values=['Yes', 'No'])
+combobox_long_term_illness.grid(row=9, column=1, padx=10, pady=5)
+combobox_long_term_illness.set('No')
+
+# Predict button
+button_predict = ttk.Button(root, text='Predict', command=predict_performance)
+button_predict.grid(row=10, column=0, columnspan=2, padx=10, pady=10)
+
+# Result label
+label_result = ttk.Label(root, text='Predicted GPA for third semester:')
+label_result.grid(row=11, column=0, columnspan=2, padx=10, pady=10)
+
+root.mainloop()
