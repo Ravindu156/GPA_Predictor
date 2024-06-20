@@ -1,4 +1,4 @@
-# GPA Predictor
+# GPA Predictor with Algorithm (*Linear Model*)
 This project is a GPA Predictor application built using **Python and Tkinter**. The application allows users to input various factors that might influence a student's GPA and predicts the GPA for the next semester based on a simple **linear regression** model.
 ## Features
 -	Input fields for GPA of the first two semesters.
@@ -66,5 +66,5 @@ Contributions are welcome! Please open an issue or submit a pull request with an
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
 ## Contact
 For any questions or suggestions, please open an issue on the GitHub repository or contact the project maintainer.
----
+
 
