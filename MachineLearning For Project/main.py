@@ -7,7 +7,7 @@ import tkinter as tk
 from tkinter import ttk
 
 # Load the dataset
-data = pd.read_csv('form_dataset.csv')
+data = pd.read_csv('MachineLearning For Project/form_dataset.csv')
 print(data.head())
 print(data.info())
 
