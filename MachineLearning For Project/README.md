@@ -1,4 +1,4 @@
-# GPA Predictor with Machine Learning (Random Forest)
+# GPA Predictor with Machine Learning (*Random Forest*)
 
 This project is a GPA Predictor application built using Python, Tkinter, and a Random Forest Regressor. The application predicts a student's GPA for the third semester based on various personal and academic factors.
 
