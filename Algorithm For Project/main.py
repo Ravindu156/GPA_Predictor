@@ -28,3 +28,21 @@ def predict_gpa(gpa1, gpa2, commute, eco_status, part_time, distance, internet, 
     predicted_gpa = max(0.0, min(4.0, predicted_gpa))
     
     return predicted_gpa
+    # Function to handle prediction and display result
+def handle_predict():
+    try:
+        gpa1 = float(gpa1_entry.get())
+        gpa2 = float(gpa2_entry.get())
+        commute = int(commute_var.get())
+        eco_status = int(eco_status_var.get())
+        part_time = int(part_time_var.get())
+        distance = float(distance_entry.get())
+        internet = int(internet_var.get())
+        attendance = int(attendance_var.get())
+        social_media = float(social_media_entry.get())
+        illness = int(illness_var.get())
+
+        result = predict_gpa(gpa1, gpa2, commute, eco_status, part_time, distance, internet, attendance, social_media, illness)
+        messagebox.showinfo("Predicted GPA", f"The predicted GPA for the next semester is: {result:.2f}")
+    except ValueError as e:
+        messagebox.showerror("Input Error", "Please enter valid values for all fields.")
